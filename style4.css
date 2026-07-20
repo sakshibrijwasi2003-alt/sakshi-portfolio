@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.7;
+    color: #4A3B31; /* Dark brown text */
+    background: #FFFDF9; /* Off-white background */
+}
+
+/* Navbar - Dark Brown */
+header {
+    background: rgba(139, 90, 43, 0.95); /* Brown */
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+nav h2 { font-weight: 700; font-size: 1.5rem; }
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+nav ul li a:hover { color: #D2B48C; } /* Light brown/Tan on hover */
+
+/* Hero Section - Brown Gradient */
+.hero {
+    background: linear-gradient(135deg, #8B5A2B 0%, #A67C52 100%); /* Brown gradient */
+    color: white;
+    text-align: center;
+    padding: 160px 20px 100px;
+}
+
+.profile-img {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 6px solid white;
+    object-fit: cover; 
+    object-position: center 25%;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+.profile-img:hover { transform: scale(1.05); }
+
+.hero h1 { 
+    font-size: 3rem; 
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.hero p { 
+    font-size: 1.2rem; 
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: white;
+    color: #8B5A2B; /* Brown text */
+    padding: 14px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.btn:hover { 
+    background: #D2B48C; /* Tan */
+    color: #4A3B31;
+    transform: translateY(-3px);
+}
+
+/* Sections */
+section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #8B5A2B; /* Brown heading */
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Skills - White Cards */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 600;
+    border: 2px solid #E5D3B3; /* Light brown border */
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.skill-card:hover { 
+    border-color: #8B5A2B;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(139,90,43,0.2);
+}
+
+/* Experience & Projects - White Cards */
+.exp-card, .project-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border-left: 5px solid #8B5A2B; /* Brown line */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+.exp-card:hover, .project-card:hover {
+    transform: translateX(10px);
+}
+
+.exp-card h3, .project-card h3 {
+    color: #8B5A2B; /* Brown */
+    margin-bottom: 10px;
+}
+
+/* Contact */
+#contact p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+/* Footer - Dark Brown */
+footer {
+    background: #4A3B31; /* Dark brown */
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-weight: 300;
+}
+
+/* Mobile Responsive */
+@media(max-width: 768px) {
+    nav ul { gap: 15px; font-size: 0.9rem; }
+    .hero h1 { font-size: 2rem; }
+    .profile-img { width: 180px; height: 180px; }
+}
